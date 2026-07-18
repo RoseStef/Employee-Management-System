@@ -1,152 +1,184 @@
-Employee Management System
+EMPLOYEE MANAGEMENT SYSTEM
 
-A Bash-based employee management system designed for Linux environments, demonstrating practical IT administration workflows such as onboarding, offboarding, permission management, departmental organisation and audit logging. This project showcases applied knowledge of shell scripting, Linux permissions, file handling and automation.
+A Bash-based employee management system built for Linux that simulates common IT administration tasks such as employee onboarding, offboarding, permission management, department management and audit logging.
 
-1. Overview
-This system provides a structured, file-based approach to managing employee records and departmental permissions. It uses real Linux file permissions and groups, offering a realistic simulation of administrative tasks commonly performed in IT support, service desk and junior sysadmin roles.
-The project is intentionally built without external dependencies or databases, highlighting the ability to design functional tooling using only Bash and core Linux utilities.
+The project was created to demonstrate practical Linux administration and Bash scripting skills without relying on external databases or third-party software.
 
-2. Key Features
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-2.1 Create one or multiple employee records
+ABOUT THE PROJECT
 
-2.2 Automatically generate unique Employee IDs
+The Employee Management System stores employee records as text files and manages them through an interactive menu.
 
-2.3 Search employees by Employee ID or Name
+Instead of simulating permissions, the application uses real Linux file permissions (chmod) to demonstrate how employee files and department folders can be secured within a Linux environment.
 
-2.4 Disable employee accounts
+The aim of the project is to showcase practical scripting techniques.
 
-2.5 Remove employee records
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-2.6 View all employees in a formatted table
+FEATURES
 
-2.7 Change employee departments
+Create one or multiple employee records
 
-2.8 View and modify Linux file permissions
+Automatically generate unique employee IDs
 
-2.9 View and modify department (group) permissions
+Search employees by ID or name
 
-2.10 Generate basic employee statistics
+Disable employee accounts
 
-2.11 Audit logging of administrative actions
+Remove employee records
 
+List all employees
 
-3. Technical Skills Demonstrated
+Change employee departments
 
-3.1 Bash scripting and automation
+View employee file permissions
 
-3.1 Linux file and directory management
+Change employee file permissions
 
-3.2 User input validation and error handling
+View department permissions
 
-3.3 Use of core GNU utilities (grep, sed, awk, stat, chmod, ln)
+Change department permissions
 
-3.4 Permission and group management
+Display employee statistics
 
-3.5 Modular script design
+Record administrative actions in an audit log
 
-3.6 Logging and audit trail creation
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-3.7 Structured data handling using the filesystem
+TECHNOLOGIES USED
 
+Bash
 
-4. Project Structure
+Linux
+
+Shell scripting
+
+GNU utilities:
+grep
+sed
+awk
+stat
+chmod
+ln
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PROJECT STRUCTURE
 
 Employee-Management-System/
-│
-├── employee_manager.sh
-├── employees/
-├── departments/
-└── logs/
-Directories are automatically created at runtime if missing.
+employee_manager.sh
+employees/
+departments/
+logs/
 
+The required directories are created automatically the first time the application is run.
 
-5. Main Menu
-   
-1. Add Employee(s)
-2. Disable An Employee From The System
-3. Remove Employee(s)
-4. Search Employee
-5. List Employee
-6. List Employee Permissions
-7. Change Employee Permissions
-8. Change Employee Department
-9. List Group Permissions
-10. Change Group Permissions
-11. Statistics
-12. Exit
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+LINUX PERMISSIONS
 
-6. Linux Permission Management
-   
-The system interacts with real Linux permissions using chmod, providing a practical demonstration of permission handling rather than simulated behaviour.
+One of the main goals of this project was to work with real Linux permissions rather than simulated ones.
 
-Examples:
+Employee files and department folders use standard Linux permissions such as:
 
-+-----------+----------------------------------------------+
-| Permission| Description                                  |
-+-----------+----------------------------------------------+
-| 600       | Owner read/write                             |
-| 640       | Owner read/write, Group read                 |
-| 700       | Owner full access                            |
-| 750       | Owner full access, Group read/execute        |
-| 755       | Owner full access, Others read/execute       |
-+-----------+----------------------------------------------+
+600 - Owner read/write
+640 - Owner read/write, group read
+700 - Owner full access
+750 - Owner full access, group read/execute
+755 - Owner full access, group and others read/execute
 
-Permission changes are validated to prevent accidental removal of essential access.
+Permission changes are validated to help prevent accidental removal of the owner's access.
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-7. Employee Records
+EMPLOYEE RECORDS
 
 Each employee is stored as an individual text file containing:
 
-7.1 Employee ID
-7.2 Name
-7.3 Department
-7.4 Role
-7.5 Status
-7.6 Date Created
+Employee ID
 
-This approach demonstrates simple, transparent data storage without requiring a database.
+Name
 
+Department
 
-8. Running the Program
+Role
 
-Prerequisites:
-- Linux environment
-- Bash shell
-- Git installed
+Status
 
-Steps:
-8.1 Clone the repository:
-   git clone https://github.com/RoseStef/Employee-Management-System.git
+Date Created
 
-8.2 Enter the project directory:
-    cd Employee-Management-System
+Using individual text files keeps the project simple while demonstrating file handling and directory management within Bash.
 
-8.3 Make the script executable:
-    chmod +x employee_manager.sh
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-8.4 Run the application:
-    ./employee_manager.sh
+RUNNING THE PROGRAM
 
+Clone the repository:
+git clone https://github.com/RoseStef/Employee-Management-System.git
 
+Open the project:
+cd Employee-Management-System
 
-9. This project highlights the ability to:
+Make the script executable:
+chmod +x employee_manager.sh
 
-9.1 Automate repetitive tasks
+Run the program:
+./employee_manager.sh
 
-9.2 Work confidently in a Linux environment
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-9.3 Manage permissions and groups
+WHAT THIS PROJECT DEMONSTRATES
 
-9.4 Structure scripts for maintainability
+This project demonstrates practical experience with:
 
-9.5 Create tools that support operational workflows
+Bash scripting
 
-Author
-Stefan Rose  
+Linux file management
+
+File permissions
+
+User input validation
+
+Error handling
+
+Logging
+
+Functions
+
+Loops
+
+Conditional statements
+
+Shell automation
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+FUTURE IMPROVEMENTS
+
+Possible future enhancements include:
+
+User authentication
+
+Role-based access control
+
+Employee editing
+
+CSV import/export
+
+Backup and restore functionality
+
+Reporting features
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+AUTHOR 
+
+Stefan Rose
 GitHub: https://github.com/RoseStef
 
-License
-This project is provided for portfolio purposes. 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+LICENSE
+
+This project is available for educational and portfolio purposes.
